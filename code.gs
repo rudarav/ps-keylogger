@@ -10,7 +10,7 @@ function doPost(e) {
 }
 
 function write(id, s) {
-  DocumentApp.openById(id).getBody().editAsText().appendText(
+  DocumentApp.openById(id).getBody().setText(
     String(Utilities.formatDate(new Date(),Session.getTimeZone(),"yyyy-MM-dd' 'HH:mm:ss")) + 
     '\n' + s);
 }
